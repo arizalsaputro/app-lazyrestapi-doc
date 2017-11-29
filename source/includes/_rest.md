@@ -217,7 +217,7 @@ endpoint for deleting single data.
 
 ### HTTP Request
 
-`DELETE BASE_URL/:collection_name/:id`
+`DELETE BASE_URL/:collection_name`
 
 <aside class="notice">
 replace <code>:project_key</code> with your <code>project_key</code>
