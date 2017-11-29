@@ -282,7 +282,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 
 <p>If you enable authentication you must add the <code>API-Token</code> header in the form of the project token you can.</p>
 
-<p><code>Base-URL: https://app.lazyrestapi.arizalsaputro.net/</code></p>
+<p><code>Base-URL: &lt;your_project_url&gt;</code></p>
 
 <p><code>API-Token: &lt;secret-key&gt;</code></p>
 
@@ -290,7 +290,7 @@ curl <span class="s2">"api_endpoint_here"</span>
 You must replace <code>secret-key</code> with your personal API key.
 </aside>
 <h1 id='restful-apis'>RESTFul APIs</h1><h2 id='create-new-data'>Create New Data</h2><pre class="highlight shell tab-shell"><code>curl --request POST <span class="se">\</span>
-  --url BASE_URL/:project_key/:collection_name <span class="se">\</span>
+  --url BASE_URL/:collection_name <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: d2fba63a-53b5-1f85-82fd-4d2fd17d2125'</span> <span class="se">\</span>
@@ -328,10 +328,10 @@ You must replace <code>secret-key</code> with your personal API key.
 </span></code></pre>
 <p>endpoint for creating new data.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST BASE_URL/:project_key/:collection_name</code></p>
+<p><code>POST BASE_URL/:collection_name</code></p>
 
 <aside class="notice">
-replace <code>:project_key</code> with your <code>project_key</code> and replace <code>:collection_name</code> wwith name what you want. <code>collection_name</code> just like table
+replace <code>:collection_name</code> wwith name what you want. <code>collection_name</code> just like table
 </aside>
 
 <aside class="notice">
@@ -342,7 +342,7 @@ don't forget using json request, and json body request is flexible, customable, 
 Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </aside>
 <h2 id='update-data'>Update Data</h2><pre class="highlight shell tab-shell"><code>curl --request PUT <span class="se">\</span>
-  --url BASE_URL/:project_key/:collection_name/:id <span class="se">\</span>
+  --url BASE_URL/:collection_name/:id <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: c82946d2-900a-4ad6-1a34-3a5f78668331'</span> <span class="se">\</span>
@@ -381,10 +381,9 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </span></code></pre>
 <p>endpoint for updating new data.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>PUT BASE_URL/:project_key/:collection_name/:id</code></p>
+<p><code>PUT BASE_URL/:collection_name/:id</code></p>
 
 <aside class="notice">
-replace <code>:project_key</code> with your <code>project_key</code>
 replace <code>:collection_name</code> wwith name what you want. <code>collection_name</code> just like table
 replace <code>:id</code> with <code>id</code> of data
 </aside>
@@ -397,7 +396,7 @@ don't forget using json request, and json body request is flexible, customable, 
 Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </aside>
 <h2 id='delete-single-data'>Delete Single Data</h2><pre class="highlight shell tab-shell"><code>curl --request DELETE <span class="se">\</span>
-  --url BASE_URL/:project_key/:collection_name/:id <span class="se">\</span>
+  --url BASE_URL/:collection_name/:id <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: 24472e0b-c54d-d930-29da-08a8eefdc096'</span>
@@ -435,7 +434,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </span></code></pre>
 <p>endpoint for deleting single data.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE BASE_URL/:project_key/:collection_name/:id</code></p>
+<p><code>DELETE BASE_URL/:collection_name/:id</code></p>
 
 <aside class="notice">
 replace <code>:project_key</code> with your <code>project_key</code>
@@ -447,7 +446,7 @@ replace <code>:id</code> with <code>id</code> of data
 Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </aside>
 <h2 id='delete-collection-all-data-inside-collection'>Delete Collection (all data inside collection)</h2><pre class="highlight shell tab-shell"><code>curl --request DELETE <span class="se">\</span>
-  --url BASE_URL/:project_key/:collection_name/:id <span class="se">\</span>
+  --url BASE_URL/:collection_name/:id <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: 24472e0b-c54d-d930-29da-08a8eefdc096'</span>
@@ -462,7 +461,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </span></code></pre>
 <p>endpoint for deleting single data.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE BASE_URL/:project_key/:collection_name/:id</code></p>
+<p><code>DELETE BASE_URL/:collection_name/:id</code></p>
 
 <aside class="notice">
 replace <code>:project_key</code> with your <code>project_key</code>
@@ -474,7 +473,7 @@ replace <code>:id</code> with <code>id</code> of data
 Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </aside>
 <h2 id='get-list-of-collection'>Get List of Collection</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url BASE_URL/:project_key/:collection_name/:id  <span class="se">\</span>
+  --url BASE_URL/:collection_name/:id  <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: b1e8c69f-a527-bad1-b409-019bb2725484'</span>
@@ -547,7 +546,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </span></code></pre>
 <p>get list of collection.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET BASE_URL/:project_key/:collection_name</code></p>
+<p><code>GET BASE_URL/:collection_name</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -604,7 +603,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </tr>
 </tbody></table>
 <h2 id='get-a-data'>Get a Data</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url BASE_URL/:project_key/:collection_name/:id
+  --url BASE_URL/:collection_name/:id
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: 0924681e-0a48-2678-082f-6a2fb6727472'</span>
@@ -641,7 +640,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </span></code></pre>
 <p>get a data of collection.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET BASE_URL/:project_key/:collection_name/:id</code></p>
+<p><code>GET BASE_URL/:collection_name/:id</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -663,7 +662,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </tr>
 </tbody></table>
 <h2 id='search-data'>Search Data</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'BASE_URL/:project_key/:collection_name/search?field=name&amp;value=ari'</span> <span class="se">\</span>
+  --url <span class="s1">'BASE_URL/:collection_name/search?field=name&amp;value=ari'</span> <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: 1a66f8ab-af91-befb-2ac8-12f29e275ec0'</span> <span class="se">\</span>
@@ -710,7 +709,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </span></code></pre>
 <p>search data inside collection</p>
 <h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET BASE_URL/:project_key/:collection_name</code></p>
+<p><code>GET BASE_URL/:collection_name</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -767,7 +766,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </tr>
 </tbody></table>
 <h2 id='is-data-exist'>Is Data Exist</h2><pre class="highlight shell tab-shell"><code>curl --request GET <span class="se">\</span>
-  --url <span class="s1">'BASE_URL/:project_key/:collection_name//is_exist?field=nikah&amp;value=true'</span> <span class="se">\</span>
+  --url <span class="s1">'BASE_URL/:collection_name//is_exist?field=nikah&amp;value=true'</span> <span class="se">\</span>
   --header <span class="s1">'cache-control: no-cache'</span> <span class="se">\</span>
   --header <span class="s1">'content-type: application/json'</span> <span class="se">\</span>
   --header <span class="s1">'postman-token: 65082054-4d1f-b96e-5cb2-029bc30cc6d6'</span>
@@ -781,7 +780,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 </span></code></pre>
 <p>check if data with specific value</p>
 <h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET BASE_URL/:project_key/:collection_name/is_exist</code></p>
+<p><code>GET BASE_URL/:collection_name/is_exist</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
