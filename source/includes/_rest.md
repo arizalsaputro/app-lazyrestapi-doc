@@ -6,7 +6,7 @@
 
 ```shell
 curl --request POST \
-  --url BASE_URL/:project_key/:collection_name \
+  --url BASE_URL/:collection_name \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: d2fba63a-53b5-1f85-82fd-4d2fd17d2125' \
@@ -49,10 +49,10 @@ endpoint for creating new data.
 
 ### HTTP Request
 
-`POST BASE_URL/:project_key/:collection_name`
+`POST BASE_URL/:collection_name`
 
 <aside class="notice">
-replace <code>:project_key</code> with your <code>project_key</code> and replace <code>:collection_name</code> wwith name what you want. <code>collection_name</code> just like table
+replace <code>:collection_name</code> wwith name what you want. <code>collection_name</code> just like table
 </aside>
 
 
@@ -70,7 +70,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 
 ```shell
 curl --request PUT \
-  --url BASE_URL/:project_key/:collection_name/:id \
+  --url BASE_URL/:collection_name/:id \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: c82946d2-900a-4ad6-1a34-3a5f78668331' \
@@ -114,10 +114,9 @@ endpoint for updating new data.
 
 ### HTTP Request
 
-`PUT BASE_URL/:project_key/:collection_name/:id`
+`PUT BASE_URL/:collection_name/:id`
 
 <aside class="notice">
-replace <code>:project_key</code> with your <code>project_key</code>
 replace <code>:collection_name</code> wwith name what you want. <code>collection_name</code> just like table
 replace <code>:id</code> with <code>id</code> of data
 </aside>
@@ -138,7 +137,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 
 ```shell
 curl --request DELETE \
-  --url BASE_URL/:project_key/:collection_name/:id \
+  --url BASE_URL/:collection_name/:id \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: 24472e0b-c54d-d930-29da-08a8eefdc096'
@@ -181,7 +180,7 @@ endpoint for deleting single data.
 
 ### HTTP Request
 
-`DELETE BASE_URL/:project_key/:collection_name/:id`
+`DELETE BASE_URL/:collection_name/:id`
 
 <aside class="notice">
 replace <code>:project_key</code> with your <code>project_key</code>
@@ -198,7 +197,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 
 ```shell
 curl --request DELETE \
-  --url BASE_URL/:project_key/:collection_name/:id \
+  --url BASE_URL/:collection_name/:id \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: 24472e0b-c54d-d930-29da-08a8eefdc096'
@@ -218,7 +217,7 @@ endpoint for deleting single data.
 
 ### HTTP Request
 
-`DELETE BASE_URL/:project_key/:collection_name/:id`
+`DELETE BASE_URL/:collection_name/:id`
 
 <aside class="notice">
 replace <code>:project_key</code> with your <code>project_key</code>
@@ -236,7 +235,7 @@ Remember — if you enable auth, don't forget add <code>API-Token</code> header
 
 ```shell
 curl --request GET \
-  --url BASE_URL/:project_key/:collection_name/:id  \
+  --url BASE_URL/:collection_name/:id  \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: b1e8c69f-a527-bad1-b409-019bb2725484'
@@ -315,7 +314,7 @@ get list of collection.
 
 ### HTTP Request
 
-`GET BASE_URL/:project_key/:collection_name`
+`GET BASE_URL/:collection_name`
 
 ### URL Parameters
 
@@ -339,7 +338,7 @@ page | data page | 1 / 2 / 3
 
 ```shell
 curl --request GET \
-  --url BASE_URL/:project_key/:collection_name/:id
+  --url BASE_URL/:collection_name/:id
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: 0924681e-0a48-2678-082f-6a2fb6727472'
@@ -382,7 +381,7 @@ get a data of collection.
 
 ### HTTP Request
 
-`GET BASE_URL/:project_key/:collection_name/:id`
+`GET BASE_URL/:collection_name/:id`
 
 ### URL Parameters
 
@@ -397,7 +396,7 @@ id | id of collection
 
 ```shell
 curl --request GET \
-  --url 'BASE_URL/:project_key/:collection_name/search?field=name&value=ari' \
+  --url 'BASE_URL/:collection_name/search?field=name&value=ari' \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: 1a66f8ab-af91-befb-2ac8-12f29e275ec0' \
@@ -450,7 +449,7 @@ search data inside collection
 
 ### HTTP Request
 
-`GET BASE_URL/:project_key/:collection_name`
+`GET BASE_URL/:collection_name`
 
 ### URL Parameters
 
@@ -474,7 +473,7 @@ page | data page | 1 / 2 / 3
 
 ```shell
 curl --request GET \
-  --url 'BASE_URL/:project_key/:collection_name//is_exist?field=nikah&value=true' \
+  --url 'BASE_URL/:collection_name//is_exist?field=nikah&value=true' \
   --header 'cache-control: no-cache' \
   --header 'content-type: application/json' \
   --header 'postman-token: 65082054-4d1f-b96e-5cb2-029bc30cc6d6'
@@ -494,7 +493,7 @@ check if data with specific value
 
 ### HTTP Request
 
-`GET BASE_URL/:project_key/:collection_name/is_exist`
+`GET BASE_URL/:collection_name/is_exist`
 
 ### URL Parameters
 

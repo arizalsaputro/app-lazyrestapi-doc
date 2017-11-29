@@ -36,7 +36,7 @@ To use LazyRestApi does not have to do Authentication, but you can also enable a
 
 If you enable authentication you must add the `API-Token` header in the form of the project token you can.
 
-`Base-URL: https://app.lazyrestapi.arizalsaputro.net/`
+`Base-URL: <your_project_url>`
 
 `API-Token: <secret-key>`
 
